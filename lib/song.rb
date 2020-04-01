@@ -30,8 +30,7 @@ class Song
   end
 
   def self.find_by_name(song_name)
-    result = ""
-    self.all.select{|song| song === song_name ? result = song.object_id}
+    return song_name.object_id if self.all.include?(song_name)
   end
 
 end
