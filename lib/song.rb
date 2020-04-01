@@ -30,7 +30,7 @@ class Song
   end
 
   def self.find_by_name(song_name)
-    self.all.select{|song| song == song_name}
+    self.all.select{|song| song === song_name ? song.object_id}
   end
 
 end
